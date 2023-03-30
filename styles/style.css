@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root {
+    --color-primary: #000000;
+    --color-secundary: #F6F6F6;
+    --color-terciary: #22D4FD;
+    --color--hover: #272727;
+
+    --font-primary: 'Krona One', sans-serif;
+    --font-secundary: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* height: 100vh;  Para usar 100% da altura */
+    box-sizing: border-box;
+    background: var(--color-primary);
+    color: var(--color-secundary);
+}
+
+a {
+    text-decoration: none; /* Retirar sublinhado do texto */
+}
+
+strong {
+    color: purple;
+}
+
+span {
+    color: brown;
+    border: 1px solid brown;
+    padding: 10px;
+}
+
+/* 
+15% é o mesmo valor do espaçamento do body
+padding: 25px 50px 75px 100px;
+    top padding is 25px
+    right padding is 50px
+    bottom padding is 75px
+    left padding is 100px
+*/
+
+.cabecalho {
+    padding: 2% 0% 0% 15%; 
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__link {
+    font-family: var(--font-secundary);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-terciary);
+    text-decoration: none;
+}
+
+.apresentacao {
+    /* margin: 10% 15%;  adiciona uma margem para centralizar os quadrados na tela */
+    padding: 5% 15%;
+    display: flex; /* coloca os quadrados lado a lado */
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.apresentacao__conteudo {
+    padding: 0% 5%;
+    width: 50%;
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 2.25; /* 2.25rem equivale a +ou- 36px. 1rem = 16px (próprio para usuário alterar no navegador)*/
+    font-family: var(--font-primary);
+}
+
+.titulo-destaque {
+    color: var(--color-terciary);
+}
+
+.apresentacao__conteudo__texto {
+    font-size: 1rem;
+    font-family: var(--font-secundary);
+}
+
+.apresentacao__links {
+    display: flex;
+    flex-direction: column; /* Coloca na posição Horizontal */
+    justify-content: space-between;
+    align-items: center; /* Alinhar a div no centro */
+    gap: 32px; /* Espaçamento entre os intens da div */
+}
+
+.apresentacao__links_subtitulo {
+    font-family: var(--font-primary);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.apresentacao__links__navegacao {
+    /* background-color: #22D4FD; */
+    display: flex; /* Posiciona os icones de forma padrão */
+    justify-content: center; /* Alinha os icones e textos para o centro */
+    gap: 16px; /* Espaçamento entre o icone e o texto */
+    border: 2px solid var(--color-terciary);
+    width: 50%;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1rem;
+    padding: 21.5px 0;
+    color: var(--color-secundary);
+    text-decoration: none;
+    font-family: var(--font-secundary);
+    font-weight: 600;
+}
+
+.apresentacao__links__navegacao:hover {
+    background-color: var(--color--hover);
+}
+
+.apresentacao__imagem{
+    width: 50%;
+}
+
+.rodape {
+    padding: 24px;
+    color: var(--color-primary);
+    background-color: var(--color-terciary);
+    text-align: center;
+    font-family: var(--font-secundary);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+    .cabecalho {
+        padding: 10%;
+    }
+    .cabecalho__menu {
+        justify-content: center;
+    }
+    .apresentacao {
+        flex-direction: column-reverse; /* Deixando a imagem em cima - trocando a ordem */
+        padding: 5% ;
+    }
+    .apresentacao__conteudo {
+        width: auto;
+    }
+}
